@@ -6,11 +6,23 @@ const WEEK = DAY * 7;
 
 const MAIN_DIR = process?.env.INIT_CWD || process?.env.PWD;
 
+const DATA_TYPES = {
+  TYPE_PRODUCT: 'product'
+};
+Object.freeze(DATA_TYPES);
+
 const STORE_TYPES = {
   FS_STORE: 'fs',
   MONGODB_STORE: 'mongodb'
 };
 Object.freeze(STORE_TYPES);
+
+const RESERVED_URLS = {
+  PAGE_API: '/api',
+  PAGE_LOGIN: '/product',
+  MEMORY_ROUTE: '/__memory'
+};
+Object.freeze(RESERVED_URLS);
 
 module.exports = {
   SECOND,
@@ -19,7 +31,9 @@ module.exports = {
   DAY,
   WEEK,
 
+  ...DATA_TYPES,
   ...STORE_TYPES,
+  ...RESERVED_URLS,
 
   MAIN_DIR
 };
