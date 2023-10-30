@@ -7,19 +7,21 @@ const WEEK = DAY * 7;
 const MAIN_DIR = process?.env.INIT_CWD || process?.env.PWD;
 
 const DATA_TYPES = {
-  TYPE_PRODUCT: 'product'
+  TYPE_PRODUCT: 'product',
+  TYPE_PAGE: 'page',
 };
 Object.freeze(DATA_TYPES);
 
 const STORE_TYPES = {
   FS_STORE: 'fs',
-  MONGODB_STORE: 'mongodb'
+  MONGODB_STORE: 'mongodb',
+  SQLITE_STORE: 'sqlite',
 };
 Object.freeze(STORE_TYPES);
 
 const RESERVED_URLS = {
   PAGE_API: '/api',
-  PAGE_LOGIN: '/product',
+  PAGE_LOGIN: '/login',
   MEMORY_ROUTE: '/__memory'
 };
 Object.freeze(RESERVED_URLS);
