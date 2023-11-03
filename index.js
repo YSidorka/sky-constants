@@ -4,7 +4,7 @@ const HOUR = MINUTE * 60;
 const DAY = HOUR * 24;
 const WEEK = DAY * 7;
 
-const MAIN_DIR = process?.env.INIT_CWD || process?.env.PWD;
+const MAIN_DIR = process?.env.INIT_CWD || process?.env.PWD || '';
 
 const DATA_TYPES = {
   TYPE_PRODUCT: 'product',
